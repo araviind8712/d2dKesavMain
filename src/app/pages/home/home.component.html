@@ -1,0 +1,80 @@
+<div #mainDiv class="container-fluid p-0" style="margin-top: 0; width: 100vw;">
+    <div #section [attr.data-index]="1">
+        <video src="assets/videos/d2dVid.mp4" class="pic" autoplay loop muted></video>
+        <p style="position: absolute; bottom:0%;line-height: 80.7px; width: 85%;" class="fsr-67 p-48 text-white">
+            <span>Unlocking Life's Secrets: Driving </span><span style="background: linear-gradient(271.84deg, #F76230 -9.65%, #FE8454 -0.32%, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%);-webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;">Innovation </span>with Precision Bioinformatics and <span style="background: linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> Collaboration</span></p>
+    </div>
+    <div class="col-md-12 section1" [attr.data-index]="2">
+        <p align="center" style="padding-bottom: 24px; margin-bottom: 0px;">Who we are</p>
+        <h3 align="center">Where Biology Meets Technology: Empowering Breakthroughs with
+            Cutting-Edge Bioinformatics. Partnering with researchers and institutions, we accelerate discoveries and
+            turn bold scientific goals into reality.</h3>
+    </div>
+    <div #section class="col-12 section2" [attr.data-index]="3">
+        <p align="right">Our Services</p>
+        <h2 align="right">Tailored Solutions for Exceptional Results</h2>
+        <app-service-menu bgColor="background-color:#EEEEEE;"></app-service-menu>
+    </div>
+    <div #section class="col-12 section3" [attr.data-index]="4">
+        <p align="left">Why choose us</p>
+        <h2 align="left">Innovative Expertise. Exceptional Results.</h2>
+        <div class="row subsec31">
+            <div class="col-md-4">
+                <hr style="border: 1px solid #FB4F23;">
+                <h5 class="choose">01</h5>
+                <h4>Expert Team</h4>
+                <p>Our team is composed of highly skilled professionals with extensive experience in bioinformatics and
+                    life sciences.</p>
+            </div>
+            <div class="col-md-4">
+                <hr style="border: 1px solid #FB4F23;">
+                <h5 class="choose">02</h5>
+                <h4>Innovative Solutions</h4>
+                <p>Leveraging cutting-edge technologies and methodologies to deliver accurate, actionable results.</p>
+            </div>
+            <div class="col-md-4">
+                <hr style="border: 1px solid #FB4F23;">
+                <h5 class="choose">03</h5>
+                <h4>Collaborative Approach</h4>
+                <p>We partner with clients to deeply understand their needs and customize our services to achieve their
+                    unique goals.</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div #section class="col-12 section4" [attr.data-index]="6">
+        <p align="left" style="margin-bottom: 0px; margin-left: 0px; padding-bottom: 16px;">Testimonials</p>
+        <h2 align="left" style="margin-bottom: 0px; margin-left: 0px; padding-bottom: 80px;">What Our Clients Say</h2>
+        <div class="row">
+            <div class="col-md-5" style="margin-left: 21px;">
+                <div class="row">
+                    <img src="assets/images/quotes.png" height="26px" width="45px" style="margin-right: 20px;">
+                    <h3>We Trust Them</h3>
+                </div>
+            </div>
+            <div style="margin-left: 32%;margin-right: 20px;margin-bottom: 0px;">
+                <p>Partnering with [Your Company Name] has transformed the way we analyze and interpret our data. Their
+                    expertise in bioinformatics allowed us to accelerate our research timelines and gain deeper insights
+                    into our genomic datasets. The team’s ability to deliver accurate, reliable solutions while staying
+                    ahead of industry trends has made them an invaluable partner. We trust them with our most critical
+                    projects!</p>
+                <br>
+                <p id="sub"><span class="head">Dr. Sarah,</span> Chief Research Officer, Genemo</p>
+            </div>
+        </div>
+    </div> -->
+    <div class="section5">
+        <p class="fsr-51" style="display: flex; justify-content: space-between; align-items: baseline; position: relative; width: 100%; color:#121314">
+            Featured Resources
+            <a href="resources?pages=resources" style="cursor: pointer;text-decoration: none;"><span style="font-style: normal; font-weight: 400; font-size: 21px; line-height: 29px; display: flex; align-items:baseline; color: #121314;">
+                View All  &nbsp; <i class="bi bi-arrow-right"></i>
+            </span></a>
+        </p>
+        <div class="row mt-48">
+            <div class="col-md-4 col-12 h-100 wipe-up" *ngFor="let resource of resources">
+                <app-resource-card [title]="resource.title" [description]="resource.description" [image]="resource.image" [postedOn]="resource.postedOn" [type]="resource.type"></app-resource-card>
+            </div>
+        </div>
+    </div>
+   
+</div>
